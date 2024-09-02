@@ -6,13 +6,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin: ["https://mern-blog-app.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: 'https://66d605005cc752353b4a27ab--benevolent-gumdrop-fd61ee.netlify.app',
+  // You can also allow credentials if necessary
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 const PORT = 8000;
